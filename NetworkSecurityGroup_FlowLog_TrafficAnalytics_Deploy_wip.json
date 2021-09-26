@@ -90,14 +90,14 @@
             "retentionPolicyDays": {
                 "type": "Integer",
                 "metadata": {
-                    "displayName": "Amount of Day NSG Flow 2.0 Logs to be retained",
+                    "displayName": "Amount of Day NSG Flow 2.0 Logs to be retained (Number of Day NSG Flow Logs 2.0 should be retained",
                     "description": "NSG Flow logs 2.0 to be retained for how long so that it does not cost much, else Storage lifecyle rule is to be applied"
                 }
             },
             "retentionPolicyEnabled": {
                 "type": "Boolean",
                 "metadata": {
-                    "displayName": "Retention Policy should be enable or not",
+                    "displayName": "Retention Policy should be enable or not (Allowed Values: True for Enabling, False for Not Enabling)",
                     "description": "NSG Flow logs 2.0 to be retained for how long so that it does not cost much, else Storage lifecyle rule is to be applied"
                 }
             }
@@ -285,7 +285,7 @@
                                     "value": "[parameters('retentionPolicyDays')]"
                                 },
                                 "retentionPolicyEnabled": {
-                                    "value": "[field('retentionPolicyEnabled')]"
+                                    "value": "[parameters('retentionPolicyEnabled')]"
                                 }
                             }
                         }
